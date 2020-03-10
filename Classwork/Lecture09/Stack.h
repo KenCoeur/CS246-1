@@ -147,11 +147,6 @@ namespace ds
                 return (top == 0);
             }
 
-            Iterator<T>* ToIterator() const 
-            {
-                return new Iterator<T>(data,top);
-            }
-
             std::string ToString() const 
             {
                 std::stringstream out;
@@ -245,12 +240,7 @@ namespace ds
                 }
                 return top->GetData();
             }
-
-            Iterator<T>* ToIterator() const 
-            {
-                return new Iterator<T>(top);
-            }
-
+            
             std::string ToString() const 
             {
                 std::stringstream out;
