@@ -18,18 +18,5 @@ bool IsPattern(std::string str)
 
 int main()
 {
-    std::ofstream out("sample.txt");
-
-    for(int i = 0;i < 3000;i += 1)
-    {
-        out << rand() % 10;
-
-        if((i + 1) % 100 == 0)
-        {
-            out << "\n";
-        }
-    }
-
-    out.close();
     return 0; 
 }
