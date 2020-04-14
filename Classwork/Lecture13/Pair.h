@@ -34,6 +34,8 @@ namespace ds
             return *this;
         }
 
+        ~Pair() {}
+
         K& GetKey() {return key;}
 
         const K& GetKey() const {return key;}
@@ -52,6 +54,16 @@ namespace ds
             this->value = value;
         }
 
+        friend bool operator==(Pair<K,V>& a,Pair<K,V>& b)
+        {
+            return a.GetKey() == b.GetKey();
+        }
+
+        friend bool operator!=(Pair<K,V>& a,Pair<K,V>& b)
+        {
+            return a.GetKey() != b.GetKey();
+        }
+
         std::string ToString() const
         {
             std::stringstream out;
@@ -60,7 +72,7 @@ namespace ds
             return out.str();
         }
 
-        std::ostream& operator<<(std::ostream& out,const Pair<K,V>& obj)
+        friend std::ostream& operator<<(std::ostream& out,const Pair<K,V>& obj)
         {
             out << obj.ToString();
             return out;
