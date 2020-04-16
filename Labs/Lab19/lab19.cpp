@@ -16,25 +16,25 @@ void Initialize(Map<K,V>& map)
 }
 
 template<class K,class V>
-void Put(Map<K,V>&,const K& key,const V& value)
+void Put(Map<K,V>& map,const K& key,const V& value)
 {
 	return;
 }
 
 template<class K,class V>
-V& Get(Map<K,V>&,const K& key)
+V& Get(Map<K,V>& map,const K& key)
 {
 	throw "Key Does Not Exists";
 }
 
 template<class K,class V>
-bool Contains(Map<K,V>&,const K& key)
+bool Contains(Map<K,V>& map,const K& key)
 {
 	return false;
 }
 
 template<class K,class V>
-void Remove(Map<K,V>&,const K& key)
+void Remove(Map<K,V>& map,const K& key)
 {
 	return;
 }
